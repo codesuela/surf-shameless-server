@@ -1,7 +1,7 @@
 __author__ = 'Christian'
 # a mini server whose sole purpose is to count url submissions
 
-from bottle import run, route, post, request
+from bottle import run, route, post, request, default_app
 import funcs
 
 @post("/submit/")
@@ -18,4 +18,4 @@ def index():
 if __name__ == "__main__":
     run(host='localhost', port=8080)
 
-app = bottle.default_app()
+app = default_app()

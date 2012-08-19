@@ -1,0 +1,6 @@
+bottle==0.10.11
+distribute==0.6.19
+gunicorn==0.14.6
+pylibmc==1.2.3
+redis==2.6.2
+wsgiref==0.1.2

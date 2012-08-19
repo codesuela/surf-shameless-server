@@ -15,4 +15,7 @@ def hit():
 def index():
     return u'nothing to see here (yet)'
 
-run(host='localhost', port=8080)
+if __name__ == "__main__":
+    run(host='localhost', port=8080)
+
+app = bottle.default_app()

@@ -17,4 +17,4 @@ def hit():
 def index():
     return u'nothing to see here (yet)'
 
-run(host='localhost', server='gunicorn', port=os.environ.get('PORT', 5000))
+run(host='0.0.0.0', server='gunicorn', port=os.environ.get('PORT', 5000))

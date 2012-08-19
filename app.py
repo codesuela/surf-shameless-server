@@ -2,6 +2,7 @@ __author__ = 'Christian'
 # a mini server whose sole purpose is to count url submissions
 
 from bottle import run, route, post, request, default_app
+import os
 import funcs
 
 @post("/submit/")
@@ -12,10 +13,8 @@ def hit():
         pass
     return  u'ok'
 
+@route("/")
 def index():
     return u'nothing to see here (yet)'
 
-if __name__ == "__main__":
-    run(host='localhost', port=8080)
-
-app = default_app()
+run(host='localhost', server='gunicorn', port=os.environ.get('PORT', 5000))

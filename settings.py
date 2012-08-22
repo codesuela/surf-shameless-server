@@ -18,5 +18,6 @@ try:
     memcache_servers = [environ["MEMCACHIER_SERVERS"]]
     memcache_settings["username"] = environ["MEMCACHIER_USERNAME"]
     memcache_settings["password"] = environ["MEMCACHIER_PASSWORD"]
+    memcache_settings["binary"] = True
 except KeyError:
     memcache_servers = ["0.0.0.0"]
